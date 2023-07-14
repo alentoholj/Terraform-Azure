@@ -18,3 +18,9 @@ Before you begin ensure that you have the folowing requirements:
 - Establishe Communication between Virtual Machines
 - Validation test
 - Delete the resources
+
+## Step 1: Sign in to Azure
+
+1. First step of this lab is to login to the Azure. Login to the Azure account using Azure CLI by running the folowing command in the terminal:
+
+<pre>az login</pre>
