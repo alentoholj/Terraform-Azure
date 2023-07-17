@@ -14,10 +14,11 @@ Before you begin ensure that you have the folowing requirements:
 ## Task Details
 
 - Sign in to Azure
-- Create Virtual Networks
-- Peer the Virtual Networks
-- Create a Virtual Machines
-- Establishe Communication between Virtual Machines
+- Create a TF files
+  - Create Virtual Networks
+  - Peer the Virtual Networks
+  - Create a Virtual Machines
+  - Establishe Communication between Virtual Machines
 - Validation test
 - Delete the resources
 
@@ -38,4 +39,33 @@ To choose correct one, use this command:
 
 ```
 az account set --subscription <name or id>
+```
+
+## Step 2: Create a TF files
+
+I created a separate files for each Azure resources, as you can see:
+- resource-group.tf
+- network.tf
+- virtualmachine.tf
+
+After you're finished with coding, you need to initialize working directory which contains terraform files. You will do that with the next command:
+
+```
+terraform init
+```
+
+To validate your configuration, you can perform this command:
+```
+terraform validate
+```
+
+If you want to create an execution plan, which lets you preview all the changes which Terraform plan will make to your infrastructure, type this command:
+
+```
+terraform plan
+```
+
+Finally, to perform the action suggested by the **'terraform plan'**, it is necessary to execute this command:
+```
+terraform apply
 ```
