@@ -13,14 +13,14 @@ Before you begin ensure that you have the folowing requirements:
 
 ## Task Details
 
-- Sign in to Azure
-- Create a TF files
-  - Create Virtual Networks
-  - Peer the Virtual Networks
-  - Create a Virtual Machines
-  - Establishe Communication between Virtual Machines
-- Validation test
-- Delete the resources
+1. Sign in to Azure
+2. Create a TF files
+    - Create Virtual Networks
+    - Peer the Virtual Networks
+    - Create a Virtual Machines
+    - Establishe Communication between Virtual Machines
+3. Validation test
+4. Delete the resources
 
 ## Step 1: Sign in to Azure
 
@@ -69,3 +69,25 @@ Finally, to perform the action suggested by the **'terraform plan'**, it is nece
 ```
 terraform apply
 ```
+After this, you can track deploy process on the Azure. After the deployment process is finished:
+<br></br>
+![azure-after-creation](https://github.com/alentoholj/Terraform-Azure/assets/82238804/20fbf2aa-632d-481f-b745-7bde176eb344)
+
+## Step 3: Validation tests
+To validate that both virtual machines can communicate between themselves, you need to do this:
+- RDP on the both virtual machines
+- Open command prompt as a Administrator
+- Execute command from the **allow-icmp.ps1** script to open ICMP on the Firewall
+- Execute ping between both virtual machines
+<br></br>
+
+Validation passed!
+<br></br>
+- Ping from VM1 to VM2
+<br></br>
+![VM1](https://github.com/alentoholj/Terraform-Azure/assets/82238804/9aa0feed-4847-4179-bcd5-e618907fbfff)
+<br></br>
+- Ping from VM2 to VM1
+<br></br>
+![VM2](https://github.com/alentoholj/Terraform-Azure/assets/82238804/7f3a7098-1873-49e2-8007-c8c2fe214f64)
+
