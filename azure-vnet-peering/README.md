@@ -78,6 +78,9 @@ To validate that both virtual machines can communicate between themselves, you n
 - RDP on the both virtual machines
 - Open command prompt as a Administrator
 - Execute command from the **allow-icmp.ps1** script to open ICMP on the Firewall
+<br></br>
+  ![add-firewall-rule](https://github.com/alentoholj/Terraform-Azure/assets/82238804/63d8fe07-9d60-4368-b450-2c8d7d849a22)
+
 - Execute ping between both virtual machines
 <br></br>
 
