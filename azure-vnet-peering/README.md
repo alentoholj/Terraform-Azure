@@ -14,7 +14,7 @@ Before you begin ensure that you have the folowing requirements:
 ## Task Details
 
 1. Sign in to Azure
-2. Create a TF files
+2. Create a TF files:
     - Create Virtual Networks
     - Peer the Virtual Networks
     - Create a Virtual Machines
@@ -94,3 +94,8 @@ Validation passed!
 <br></br>
 ![VM2](https://github.com/alentoholj/Terraform-Azure/assets/82238804/7f3a7098-1873-49e2-8007-c8c2fe214f64)
 
+## Step 4: Delete the resources
+After validation passed, you need to destroy all the resources which you provisioned on the Azure previously. To do that, execute the next command:
+```
+terraform destroy
+```
