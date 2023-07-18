@@ -72,3 +72,13 @@ After this, you can track deploy process on the Azure. After the deployment proc
 ![azure-after-deployment](https://github.com/alentoholj/Terraform-Azure/assets/82238804/6efe4167-4a23-49b9-8889-5d2187c92cf7)
 
 ## Step 3: Validation tests
+
+To validate that both virtual machines can communicate between themselves, you need to do this:
+- RDP on the both virtual machines
+- Execute ping between both virtual machines
+<br></br>
+**Validation passed!**
+<br></br>
+- Ping from VM1 to VM2 and ping from VM2 to VM1
+<br></br>
+![validate](https://github.com/alentoholj/Terraform-Azure/assets/82238804/70dc2006-fd92-419d-8d91-57ff158b7377)
