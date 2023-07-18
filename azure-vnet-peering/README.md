@@ -71,7 +71,7 @@ terraform apply
 ```
 After this, you can track deploy process on the Azure. After the deployment process is finished:
 <br></br>
-![azure-after-creation](https://github.com/alentoholj/Terraform-Azure/assets/82238804/20fbf2aa-632d-481f-b745-7bde176eb344)
+![azure-after-creation](https://github.com/alentoholj/Terraform-Azure/assets/82238804/f08dd052-8d9a-463c-bd07-ef9bc37d655f)
 
 ## Step 3: Validation tests
 To validate that both virtual machines can communicate between themselves, you need to do this:
@@ -79,7 +79,7 @@ To validate that both virtual machines can communicate between themselves, you n
 - Open command prompt as a Administrator
 - Execute command from the **allow-icmp.ps1** script to open ICMP on the Firewall
 <br></br>
-  ![add-firewall-rule](https://github.com/alentoholj/Terraform-Azure/assets/82238804/63d8fe07-9d60-4368-b450-2c8d7d849a22)
+  ![add-firewall-rule](https://github.com/alentoholj/Terraform-Azure/assets/82238804/f683e0ae-34af-4e1e-af0d-6d9f12c5813a)
 
 - Execute ping between both virtual machines
 <br></br>
@@ -88,11 +88,12 @@ Validation passed!
 <br></br>
 - Ping from VM1 to VM2
 <br></br>
-![VM1](https://github.com/alentoholj/Terraform-Azure/assets/82238804/9aa0feed-4847-4179-bcd5-e618907fbfff)
+![VM1](https://github.com/alentoholj/Terraform-Azure/assets/82238804/c5a40bdd-3d7b-415c-96b7-511caa74b81a)
+
 <br></br>
 - Ping from VM2 to VM1
 <br></br>
-![VM2](https://github.com/alentoholj/Terraform-Azure/assets/82238804/7f3a7098-1873-49e2-8007-c8c2fe214f64)
+![VM2](https://github.com/alentoholj/Terraform-Azure/assets/82238804/dafcc27d-98ee-45e7-929e-ff13a40cc64c)
 
 ## Step 4: Delete the resources
 After validation passed, you need to destroy all the resources which you provisioned on the Azure previously. To do that, execute the next command:
