@@ -6,7 +6,7 @@ resource "azurerm_recovery_services_vault" "backup-vault" {
   resource_group_name = azurerm_resource_group.azure-backup-vm.name
   sku                 = "Standard"
   storage_mode_type   = "LocallyRedundant"
-  soft_delete_enabled = true
+  soft_delete_enabled = false
 
   tags = var.tag
 }
