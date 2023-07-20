@@ -16,6 +16,7 @@ Before you begin ensure that you have the folowing requirements:
     - Create Virtual Network
     - Create a Virtual Machine
     - Create a Backup Vault
+    - Associate Backup policy to the Virtual Machine
 3. Validation test
 4. Delete the resources
 
