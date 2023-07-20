@@ -44,6 +44,8 @@ I created a separate files for each Azure resources, as you can see:
 - resource-group.tf
 - network.tf
 - virtualmachine.tf
+- provider.tf
+- variable.tf
 
 After you're finished with coding, you need to initialize working directory which contains terraform files. You will do that with the next command:
 
