@@ -69,3 +69,21 @@ Finally, to perform the action suggested by the **'terraform plan'**, it is nece
 ```
 terraform apply
 ```
+After this, you can track deploy process on the Azure. After the deployment process is finished:
+<br></br>
+![after-backup](https://github.com/alentoholj/Terraform-Azure/assets/82238804/a80b8dda-49dc-4c01-8d1b-1325a6893d73)
+
+## Step 3: Validation tests
+
+To validate that we have created backup policy and backup for the mentioned virtual machine, you need to:
+- Go to Azure Portal
+- Open the Backup Center
+- On the left pane, you have a Vault, click it
+- Click on the newly created vault
+- On the left pane, under the Protected Items, click on Backup Items, and then click on the Azure Virtual Machine
+- Confirm that backup is there for the virtual machine which we created through terraform
+
+**Validation passed!**
+<br></br>
+![validation-backup](https://github.com/alentoholj/Terraform-Azure/assets/82238804/8cb14671-c5a0-4988-8871-909ef8cf1e10)
+
