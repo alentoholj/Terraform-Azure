@@ -75,3 +75,8 @@ terraform apply
 ```
 After this, you can track deploy process on the Azure. After the deployment process is finished:
 <br></br>
+![after-deployment](https://github.com/alentoholj/Terraform-Azure/assets/82238804/1fabced6-77f4-4b3a-9641-5e8f8ba9613e)
+![storage-rg](https://github.com/alentoholj/Terraform-Azure/assets/82238804/3c732bd7-1658-438a-bfb1-a747caf16d1f)
+![vm-rg](https://github.com/alentoholj/Terraform-Azure/assets/82238804/73463185-66b2-45bc-bee7-5bb2b803736e)
+
+
