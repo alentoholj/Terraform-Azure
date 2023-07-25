@@ -32,7 +32,7 @@ resource "azurerm_storage_blob" "azure-storage-blob" {
     source                 = "./LICENSE"
 }
 
-data "azurerm_storage_account_sas" "azure=storage-account-sas" {
+data "azurerm_storage_account_sas" "azure-storage-account-sas" {
   connection_string = azurerm_storage_account.azure-storage-account.primary_connection_string
   https_only        = true
   ip_addresses = azurerm_public_ip.azure-vm-ip.ip_address
