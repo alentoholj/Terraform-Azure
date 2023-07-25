@@ -1,6 +1,6 @@
 prefix = ["azure-vm","azure-storage"]
 
-location = ["westeurope","uksouth"]
+location = ["westeurope","uksouth","ukwest"]
 
 storage_account = "storagecarpellab1921"
 
