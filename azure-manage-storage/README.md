@@ -79,4 +79,17 @@ After this, you can track deploy process on the Azure. After the deployment proc
 ![storage-rg](https://github.com/alentoholj/Terraform-Azure/assets/82238804/3c732bd7-1658-438a-bfb1-a747caf16d1f)
 ![vm-rg](https://github.com/alentoholj/Terraform-Azure/assets/82238804/73463185-66b2-45bc-bee7-5bb2b803736e)
 
+## Step 3: Validation tests
+
+To validate that both virtual machines can communicate between themselves, you need to do this:
+- RDP on the virtual machine
+- From the Azure portal, copy the connect script for the storage file share and run the script on the virtual machine through PS
+<br></br>
+  ![storage-file-share](https://github.com/alentoholj/Terraform-Azure/assets/82238804/d5719978-c366-4dc9-9244-d94cfe983f9e)
+- If it is everything okay, you will see a file share as a network location
+<br></br>
+  ![storage-map-drive](https://github.com/alentoholj/Terraform-Azure/assets/82238804/0848c3c5-dd00-4273-af68-2a3addbe9a36)
+- Open the network location and you will see file with name LICENCES
+<br></br>
+  ![storag-share-file-licence](https://github.com/alentoholj/Terraform-Azure/assets/82238804/0fd21bb9-3530-46dd-aa7f-5a76810f03a2)
 
