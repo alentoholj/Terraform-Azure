@@ -30,6 +30,7 @@ resource "azurerm_storage_blob" "azure-storage-blob" {
     storage_container_name = azurerm_storage_container.azure-storage-container.name
     type                   = "Block"
     source                 = "./LICENSE"
+    depends_on = [azurerm_storage_container.azure-storage-container]
 }
 
 data "azurerm_storage_account_sas" "azure-storage-account-sas" {
@@ -65,6 +66,7 @@ data "azurerm_storage_account_sas" "azure-storage-account-sas" {
             tag     = false
             filter  = false
           }
+  depends_on = [azurerm_storage_blob.azure-storage-blob]
 }
 
 
@@ -76,6 +78,7 @@ resource "azurerm_storage_share" "azure-storage-share" {
   quota = 5
   enabled_protocol = "SMB"
   access_tier = "Hot"
+  depends_on = [azurerm_storage_account.azure-storage-account]
 }
 
 #Upload file to File share
@@ -84,6 +87,7 @@ resource "azurerm_storage_share_file" "azure-storage-share-file" {
   name = "LICENCES"
   storage_share_id = azurerm_storage_share.azure-storage-share.id
   source = "./LICENSE"
+  depends_on = [azurerm_storage_share.azure-storage-share]
 }
 
 #Create a network rules for access to the storage account
@@ -93,4 +97,5 @@ resource "azurerm_storage_account_network_rules" "azure-storage-rules" {
   ip_rules = [azurerm_public_ip.azure-vm-ip.ip_address]
   virtual_network_subnet_ids = [azurerm_subnet.azure-vm-subnet.id]
   bypass = ["AzureServices"]
+  depends_on = [azurerm_storage_account.azure-storage-account]
 }
