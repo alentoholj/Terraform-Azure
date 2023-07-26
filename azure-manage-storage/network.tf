@@ -1,4 +1,4 @@
-#Create a first VNet
+#Create a VNet
 
 resource "azurerm_virtual_network" "azure-vnet-storage" {
     name                = "${var.vnet_name}-01"
