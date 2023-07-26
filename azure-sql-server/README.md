@@ -89,3 +89,9 @@ To validate that you are able to connect to the SQL instance, from virtual machi
 - If it is everything okay, you will be connected to the SQL server instance and on the left side you will see your database
 <br></br>
   ![sql-server-database-access](https://github.com/alentoholj/Terraform-Azure/assets/82238804/c729be25-e633-48ae-93cc-3681c19f1b0b)
+
+## Step 4: Delete the resources
+After validation passed, you need to destroy all the resources which you provisioned on the Azure previously. To do that, execute the next command:
+```
+terraform destroy
+```
