@@ -51,3 +51,41 @@ I created a separate files for each Azure resources, as you can see:
 - variable.tf
 - sqlserver.tf
 - output.tf
+
+After you're finished with coding, you need to initialize working directory which contains terraform files. You will do that with the next command:
+
+```
+terraform init
+```
+
+To validate your configuration, you can perform this command:
+```
+terraform validate
+```
+
+If you want to create an execution plan, which lets you preview all the changes which Terraform plan will make to your infrastructure, type this command:
+
+```
+terraform plan
+```
+
+Finally, to perform the action suggested by the **'terraform plan'**, it is necessary to execute this command:
+```
+terraform apply
+```
+After this, you can track deploy process on the Azure. After the deployment process is finished:
+<br></br>
+![sql-server-after-deployment](https://github.com/alentoholj/Terraform-Azure/assets/82238804/6f1a34de-503c-4be9-8fc6-74bc11d7bf89)
+
+## Step 3: Validation tests
+
+To validate that you are able to connect to the SQL instance, from virtual machine, you need to proceed with the next steps:
+- RDP on the virtual machine
+- Download the SSMS tool
+- Install the SSMS tool
+- Open the SSMS and fill out connection data (Server type, Server name, Authentification:SQL, Login and Password)
+<br></br>
+  ![sql-server-ssms](https://github.com/alentoholj/Terraform-Azure/assets/82238804/06d7d159-2a52-46df-861f-077c2a3f34f2)
+- If it is everything okay, you will be connected to the SQL server instance and on the left side you will see your database
+<br></br>
+  ![sql-server-database-access](https://github.com/alentoholj/Terraform-Azure/assets/82238804/c729be25-e633-48ae-93cc-3681c19f1b0b)
