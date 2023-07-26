@@ -81,7 +81,7 @@ After this, you can track deploy process on the Azure. After the deployment proc
 
 ## Step 3: Validation tests
 
-To validate that both virtual machines can communicate between themselves, you need to do this:
+To validate that you can, from the virtual machine, fetch storage, you need to do this:
 1. Validation test for the storage File Share
     - RDP on the virtual machine
     - From the Azure portal, copy the connect script for the storage file share and run the script on the virtual machine through PS
