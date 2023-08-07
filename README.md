@@ -5,3 +5,4 @@
 - **[azure-backup-vm](https://github.com/alentoholj/Terraform-Azure/tree/main/azure-backup-vm)**
 - **[azure-manage-storage](https://github.com/alentoholj/Terraform-Azure/tree/main/azure-manage-storage)**
 - **[azure-sql-server](https://github.com/alentoholj/Terraform-Azure/tree/main/azure-sql-server)**
+- **[azure-scale-set](https://github.com/alentoholj/Terraform-Azure/tree/main/azure-scale-set)**
