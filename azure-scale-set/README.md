@@ -74,3 +74,16 @@ After this, you can track deploy process on the Azure. After the deployment proc
 
 ![image](https://github.com/alentoholj/Terraform-Azure/assets/82238804/57ffdb1c-26eb-4469-820d-c48d3a2adfb4)
 
+## Step 3: Validation tests
+To validate that both virtual machines can communicate between themselves, you need to do this:
+- RDP on the virtual machines
+- Install the Internet Information Services (IIS) on all virtual machines
+- Modify HTML file
+- Call the http://public_ip
+
+## Step 4: Delete the resources
+After validation passed, you need to destroy all the resources which you provisioned on the Azure previously. To do that, execute the next command:
+```
+terraform destroy
+```
+
