@@ -35,32 +35,32 @@ resource "azurerm_public_ip" "vmss" {
 #Create a NSG
 
 resource "azurerm_network_security_group" "vmss" {
-  name                        = "${var.prefix}-nsg-lb"
-  location                    = var.location
-  resource_group_name         = azurerm_resource_group.vmss.name
+  name                = "${var.prefix}-nsg-lb"
+  location            = var.location
+  resource_group_name = azurerm_resource_group.vmss.name
 
-    security_rule {
-      name                   = "HTTPandHTTPS"
-      priority               = 200
-      direction              = "Inbound"
-      access                 = "Allow"
-      protocol               = "*"
-      source_port_range      = "*"
-      destination_port_ranges = ["80","443",]
-      source_address_prefix  = "*"
-      destination_address_prefix= "*"
-    }
+  security_rule {
+    name                       = "HTTPandHTTPS"
+    priority                   = 200
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "*"
+    source_port_range          = "*"
+    destination_port_ranges    = ["80", "443", ]
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
 
-    security_rule {
-      name                       = "RDP"
-      description                = "Deny RDP traffic"
-      priority                   = 195
-      direction                  = "Inbound"
-      access                     = "Allow"
-      protocol                   = "Tcp"
-      source_port_range          = "*"
-      destination_port_ranges     = ["3389"]
-      source_address_prefix      = "*"
-      destination_address_prefix ="*"
-    }
+  security_rule {
+    name                       = "RDP"
+    description                = "Deny RDP traffic"
+    priority                   = 195
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_ranges    = ["3389"]
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
 }

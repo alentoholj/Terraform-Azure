@@ -22,8 +22,8 @@ resource "azurerm_windows_virtual_machine_scale_set" "vmss" {
   }
 
   network_interface {
-    name    = "${var.prefix}-nic"
-    primary = true
+    name                      = "${var.prefix}-nic"
+    primary                   = true
     network_security_group_id = azurerm_network_security_group.vmss.id
 
     ip_configuration {
